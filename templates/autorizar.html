@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>
+    <br>
+    <Center> <b> autorizar requisicion </b> </Center>
+
+</h3>
+   <br>
+   <br>
+<form action="/requisicion_autorizar/{{AutorizarDatos.0}}" method="post">
+   <div class="container">
+          <div class="form-row">
+               <div class="col-xs-12 ">
+                <div class="col-md-3">
+                    <label class="form-label">Folio:
+                        <input type="text" class="form-control" value="{{AutorizarDatos.1}}" id="Folio" name="Folio" readonly>
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Puesto a Cubrir:
+                        <input type="text" class="form-control" value="{{AutorizarDatos.2}}" name="idPuesto" id="idPuesto"
+                            readonly>
+                    </label>
+                </div>
+        
+                <div class="mb-3">
+                      <label for="revizado" class="form-label"><strong> revisado por:</strong></label>
+                      <input type="text" class="form-control" name="revizado" id="revizado"required></input>
+                </div>
+                <div class="mb-3">
+                    <label for="autorizada" class="form-label"><strong> autorizado por:</strong></label>
+                    <input type="text" class="form-control" name="autorizada" id="autorizada"required></input>
+              </div>
+                </div>
+          </div>
+         
+         
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">insertar</button>
+      </div>
+     </form>
+</form>
+{% endblock %}
